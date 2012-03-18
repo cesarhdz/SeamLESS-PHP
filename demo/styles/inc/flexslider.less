@@ -1,0 +1,48 @@
+/*------- SLIDER -------------------*/
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {width: 100%;}
+.flexslider .slides li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img { display: block; width:100%;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+//html[xmlns] .slides {display: block;} 
+//* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* Aplicamos list-style:none; */
+.flexslider ul {list-style:none;}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {background-color: #fff; position: relative; }
+
+/* Direction Nav */
+.flex-direction-nav { overflow:auto; position:absolute; top:20%; width:100%; }
+.flex-direction-nav li { float:left; width:50%; overflow:hidden;}
+.flex-direction-nav li a {padding:.5em; margin:0 .5em; display:block; font-size:1.2em; width:1.5em; height:1.5em;
+						text-align:center; 
+						background-color: #6CF; color:#FFF;
+						border-radius: 50%; }
+
+.flex-direction-nav li a.next {float:right;}
+.flex-direction-nav li a:hover,			
+.flex-direction-nav li a:active,			
+.flex-direction-nav li a:focus			
+{background-color:#B02825;}
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: absolute; left:-9999em;}
+
+/* Flexslider para Chazaro
+**********************************/
+.slides > li {overflow:hidden; background-color:#FFF; } /* Estilos para que no se traslapen las dispositivas */
+#slider > div > section {position:relative;}
+#slider .desc > * {padding:0 1em;}
+#slider h1 {font-size:2.5em; line-height:1.2;}
+#slider .excerpt *{font-size:.875em; line-height:2; color:#666;}

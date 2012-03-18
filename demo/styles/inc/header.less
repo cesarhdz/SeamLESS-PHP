@@ -1,0 +1,96 @@
+/* Branding ----*/
+/* Colores Seccion */
+/*
+* Si se publica tendríamos que cambiar los id's, pero no creo que haya problema'
+* casa : home
+* cava : 10
+* cigar : 12
+* boutique : 8
+* tabaqueria : 6
+*/
+/* Zig zag sin padding, para moviles */
+#branding,
+#branding nav { background-image: url('../img/header-border-bottom.png'); background-repeat: repeat-x; background-position: bottom; }
+            
+#logo { padding-top:1em;} 
+#logo img{margin:0 auto; display:block;}  
+
+/* Color default para casa, cava y boutique y demás secciones */
+#branding, 
+#branding nav {background-color: @colDefault;}
+
+/* Colores Cigar Bar */
+.page-id-12 #branding, 
+.page-id-12 #branding nav{background-color: @colCigar;}
+
+/* Colores Tabaquería */
+.page-id-6 #branding, 
+.page-id-6 #branding nav,
+.parent-pageid-6 #branding, 
+.parent-pageid-6 #branding nav {background-color: @colTabaqueria;}
+
+/*Colores para Hovers, topbar*/
+#branding > header, 
+.block > nav .menu-item a:active,                
+.block > nav .menu-item a:focus,                    
+.block > nav .menu-item a:hover {background-color: darken(@colDefault, 20%)}    
+//.block > nav .menu-item a:hover {background-color: darken('#821111', 20%)}    5c1513
+
+
+.page-id-6 #branding > header, 
+.page-id-6 .block > nav .menu-item a:active,              
+.page-id-6 .block > nav .menu-item a:focus,                    
+.page-id-6 .block > nav .menu-item a:hover {background-color:darken(@colTabaqueria, 20%); }   
+
+
+.page-id-12 #branding > header,
+.page-id-12 .block > nav .menu-item a:active,                
+.page-id-12 .block > nav .menu-item a:focus,                    
+.page-id-12 .block > nav .menu-item a:hover {background-color: darken(@colCigar, 20%); }   
+
+/* Border para el topbar */
+#branding > header > div {border-bottom-color:@colDefault;}
+.page-id-6 #branding > header > div {border-bottom-color:@coltabaqueria; }
+.page-id-12 #branding > header > div {border-bottom-color:@colcigar; }
+
+/* Menu Principal */
+#menu-main {overflow: hidden; width:100%; clear:both; /* Para que se muestre completo */}
+.block > nav .menu-item {float:left; text-align:center; width:25%; margin:.5em 0; }
+.block > nav .menu-item a { font-family:'Terminal Dosis', Tahoma, sans-serif; padding:.5em 0  .5em; display:block; 
+                    color:#FFF; border-radius:2px;}
+#menu-main > .current-menu-item {background-color:#FFF7DB;}
+.block > nav li.current-menu-item a,
+.block > nav li.current-menu-item a:hover,
+.block > nav li.current-menu-item a:active  { border-radius:2px; color:#000}                    
+    #menu-main li.current-menu-item a:hover{background-color:inherit;} /* Para cuando se hacer hover, sobre el item acutal no debe cambiar */
+                
+.block > nav .menu-item a span {@ocultar;}
+
+/* Posición de los Sprites */
+#menu-main {
+    .cava a {background-position: center -240px;}
+    .bar a {background-position: center -320px;}
+    .boutique a {background-position: center -160px;}
+    .tabaqueria a {background-position: center -80px;}
+    .current-menu-item.casa a{background-position: center -400px;}
+    .current-menu-item.cava a{background-position: center -480px;}
+    .current-menu-item.boutique a{background-position: center -560px;}
+    .current-menu-item.bar a{background-position: center -640px;}
+    .current-menu-item.tabaqueria a{background-position: center -720px;}
+}
+
+/*------- #Branding header ----- */
+#branding > header {width:100%; margin:0; height:4em; overflow:hidden;}
+
+/* Asignamos el tamaño del border y altura, en la seccion de colores, sólo el color */
+#branding > header > div {height:2em; border-bottom-width:2em; border-bottom-style: solid; width:100%; } 
+#branding > header hgroup {float:left; width:40%;}
+#logo {margin-left:1em; padding:0;}
+#logo a { display:block; height:4em; width:8em;
+            text-indent:-9999em; background: url('../img/casa-logo-color.png') center center no-repeat;} /* Mostramos la imagen y ocultamos el texto */
+
+#branding > header aside {float:right; opacity:.5; padding:.5em;}
+#branding > header aside a {color:#FFF; font-size:.75em; filter: alpha(opacity = 50); display:block; zoom:1;  line-height:1em;}
+
+/* Ocultamos el enlace del menu de Home para móviles, se reemplaza por el logo */
+#branding .casa {@ocultar;}

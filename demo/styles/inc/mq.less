@@ -1,0 +1,77 @@
+@media screen AND (min-width:416px){
+    .block > nav .menu-item a span {position:relative; left:auto;}
+    .flex-direction-nav {  top:30%; }
+    
+    #twfeed {width:100%;}
+}
+
+
+@media screen AND (min-width:720px){
+    .block > * {max-width:100%;}
+    
+    /* Agregamos el zig zag con padding, para lograr el efecto del current item */
+    #branding,
+    #branding nav { background-image: url('../img/header-border-bottom-padding.png'); background-repeat: repeat-x; background-position: bottom; }
+    
+    /*Mostramos el enlace de home en pantalla grandes */
+    #branding .casa {position:relative; left:auto;}
+    #branding > header {width:100%; height:2em; margin:0;}
+    .block > nav .menu-item {width:19.3%; min-width:8.5em;  padding:0 0 1em; margin:0;}
+    .block > nav li.current-menu-item {width:22.5%; background:#FFF7DB url('../img/current-banner.png') no-repeat center bottom; }
+    .block > nav li.current-menu-item a{margin:1em 0; padding:.25em 0; }
+    .block > nav .menu-item > a {background:url('../img/menu-logos.png') no-repeat center top; height:4em; margin-bottom:.5em;}
+    #logo, 
+    .block > nav .menu-item > a em, 
+    .block > nav .menu-item > a span {position:absolute; left:-9999em;}
+    
+    #wrap {margin-top:-.5em;}
+    #wrap > * {padding-top:1.5em; padding-bottom:1.5em;}
+    
+    /* Evitamos que se muestren todas las diapositivas, sólamente si está activo el JS */
+    .js .slides {height:16em; overflow:hidden;}
+    #slider figure {width:56.89655172413793%; float:left; height:16em;}
+    #slider .desc {width:43.10344827586207%; float:right; height:12em;}
+    .flex-direction-nav {left:58%; top:12em; width:42%;}
+    .flex-direction-nav li { margin-right:.5em; width:3.75em;} 
+    
+    
+    #contact p {font-size:1.125em; }
+}
+
+/*Aquí van las declaraciones para monitores con una resolucipón mayor a 800px*/
+@media screen AND (min-width:928px){
+	
+    /* Todos los elementos menores a bloque tendrán los 60 ems */ 
+    .block > *, .block > header > div{width:58em; margin:0 auto;}
+    .block > footer{padding:1em 2em;}
+    
+    .extra {position:relative; left:auto;}
+    
+    .footext {padding-left:10em; }
+    #colophon {background:#E2E2E2 url("./img/casachazaro-bn.png") center right no-repeat;}
+    #wine {left:2em;}
+    
+    .sidebar > * {float:left; display:block; margin:0 2em 0 0;}
+    .sidebar > header {width:8em; margin-top:1em; float:left;}
+    
+    .sidebar > .social {min-width:13em;} /* Permite tener widgets más pequeños */
+    #twfeed {width:13em;}
+    #fbfeed {width:18em;}
+    #ytchannel {width:13em; margin-right:0;}
+    
+}
+
+@media screen AND (min-width:1360px){
+    body{font-size:1.125em;}
+    .block > nav .menu-item a {margin-top:.4em;}
+    .js #fbfeed > .feed {height:5em;} /* Se modifica para qe no salgan elementos raros*/
+    
+    article .content > * {font-size:16px;} /* No hacemos más grande la tpografía del contenido porque la engorda el navegador */
+}
+
+/* Si hay espacio, mostramos siempre el menu */
+
+/*@media screen AND (min-height:880px){
+    #branding {position:fixed; top:0; z-index:1000;}
+    #wrap {margin-top:10em;}
+}*/
