@@ -6,7 +6,7 @@
  */
 
 //Incluimos primero less
-include_once  'less/lessc.inc.php';
+include_once  '_phpless/lessc.inc.php';
 
 //Definimos la variable ENVIRONMENT, que nos permite saber si confiamos en el caché, además de mostrar errores
 //Puede ser production o development
@@ -21,7 +21,7 @@ class Less_compiler {
     var $default_file = 'index.less';
     var $file;
     
-    var $cache_dir = 'cache/';
+    var $cache_dir = '_phpless/cache/';
     var $cache_lifetime; //Todavía no funciona
     
     private $_css;
